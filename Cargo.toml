@@ -1,0 +1,13 @@
+[package]
+name = "minigrep"
+version = "0.1.0"
+author = ["Licht Cui <yanguang.cui@gmail.com>"]
+description = """
+coding with rust
+"""
+edition = "2021"
+license = "LICENSE-MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
