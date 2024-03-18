@@ -49,13 +49,13 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 
     let contents = fs::read_to_string(config.file_path)?;
 
-    let results = if config.ignore_case {
-        search_case_insensitive(&config.query, &contents)
+    let search_action = if config.ignore_case {
+        search_case_insensitive
     } else {
-        search(&config.query, &contents)
+        search
     };
 
-    for line in results {
+    for line in search_action(&config.query, &contents) {
         println!("{line}");
     }
 
